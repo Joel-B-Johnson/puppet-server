@@ -1,0 +1,8 @@
+# /etc/puppetlabs/code/environments/production/nodes/agent.mshome.net.yaml
+---
+profile::maintenance::scripts::ssl: true
+profile::maintenance::scripts::backups_enabled: true
+profile::maintenance::scripts::site_alias: "Puppet Agent"
+
+profile::manifests::joelwebapp::webapp::not_sql: false
+profile::manifests::joelwebapp::webapp::not_react: false

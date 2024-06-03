@@ -1,0 +1,8 @@
+# /etc/puppetlabs/code/environments/production/data/common.yaml
+---
+profile::maintenance::scripts::ssl: false
+profile::maintenance::scripts::backups_enabled: false
+profile::maintenance::scripts::site_alias: "Common Server"
+
+profile::manifests::joelwebapp::webapp::not_sql: true
+profile::manifests::joelwebapp::webapp::not_react: true
