@@ -5,7 +5,7 @@ HOSTS_FILE="/etc/hosts"
 TMP_FILE="/tmp/hosts.tmp"
 
 # Removes all duplicate lines.
-sudo awk '!seen[$0]++' /etc/hosts > /tmp/hosts_temp && mv /tmp/hosts_temp /etc/hosts
+sudo awk '!seen[$0]++' /etc/hosts > /tmp/hosts_temp && sudo mv /tmp/hosts_temp /etc/hosts
 
 # Remove lines containing "agent.mshome.net" and "host.mshome.net"
 sudo sed -i '/agent\.mshome\.net\|host\.mshome\.net/d' "$HOSTS_FILE"
