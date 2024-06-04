@@ -17,4 +17,7 @@ class profile::joelwebapp::webapp (
       ensure  => installed,
     }
   }
+  notify { 'hello_joel':
+    message => 'Hello Joel :)',
+  }
 }
