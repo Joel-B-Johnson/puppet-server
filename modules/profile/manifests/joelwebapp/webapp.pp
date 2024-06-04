@@ -17,7 +17,7 @@ class profile::joelwebapp::webapp (
       ensure  => installed,
     }
   }
-  notify { 'hello_joel':
-    message => 'Hello Joel :)',
+  notify { 'hello':
+    message => 'Hello Joel, this was written from puppet agent!',
   }
 }
