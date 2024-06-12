@@ -15,7 +15,7 @@ CURRENT_IP=$(hostname -I | awk '{print $1}')
 
 # Add new lines to the hosts file
 echo "$CURRENT_IP agent.mshome.net agent" >> "$TMP_FILE"
-echo "$(nslookup host.mshome.net | awk '/^Address: / {print $2}') agent.mshome.net puppet" >> "$TMP_FILE"
+echo "$(nslookup host.mshome.net | awk '/^Address: / {print $2}') host.mshome.net puppet" >> "$TMP_FILE"
 
 # Append the rest of the original hosts file
 cat "$HOSTS_FILE" >> "$TMP_FILE"
